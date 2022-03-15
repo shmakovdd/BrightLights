@@ -1,0 +1,9 @@
+{
+  "white": "#ffffff",
+  "h2": "48px",
+  "h1": "90px",
+  "bp-desktop-hd": "1985px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px"
+}

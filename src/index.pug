@@ -1,0 +1,51 @@
+include ./mixins.pug
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        .wrapper
+            section.section-hero 
+                header.header 
+                    .container.header__container 
+                        .logo
+                            a(class="logo__link" href="index.html")      
+                                +image('logo.png', 'logo__img')
+                        nav.header__nav.nav
+                            ul.nav__list 
+                                li.nav__item About    
+                                li.nav__item News 
+                                li.nav__item Music 
+                                li.nav__item Media 
+                                li.nav__item Tours 
+                                li.nav__item Contacts 
+                .promo
+                    .container
+                        h2.promo-title New single
+                        h1.promo-name War For Love
+                .news
+                    .container.news__container 
+                        ul.news__list
+                            li.news__item.news__first-item 
+                                .news__bottom   
+                                    p.news__descr Working on my upcoming full-lenth album that`s releasing later this year.                   
+                            li.news__item.news__second-item 
+                                .news__bottom
+                                    p.news__descr Working on my upcoming full-lenth album that`s releasing later this year.                   
+                            li.news__item.news__third-item  
+                                .news__bottom
+                                    p.news__descr Working on my upcoming full-lenth album that`s releasing later this year.                   
+
+
+
+
+
+
+                        
+
+
