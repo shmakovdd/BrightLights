@@ -13,20 +13,26 @@ html(lang="en")
             section.section-hero 
                 header.header 
                     .container.header__container 
-                        .logo
+                        .header__logo.logo
                             a(class="logo__link" href="index.html")      
                                 +image('logo.png', 'logo__img')
                         nav.header__nav.nav
                             ul.nav__list 
-                                li.nav__item About    
-                                li.nav__item News 
-                                li.nav__item Music 
-                                li.nav__item Media 
-                                li.nav__item Tours 
-                                li.nav__item Contacts 
+                                li.nav__item 
+                                    a.nav__link About    
+                                li.nav__item 
+                                    a.nav__link News 
+                                li.nav__item
+                                    a.nav__link  Music 
+                                li.nav__item
+                                    a.nav__link  Media 
+                                li.nav__item
+                                    a.nav__link  Tours 
+                                li.nav__item
+                                    a.nav__link  Contacts 
                 .promo
                     .container
-                        h2.promo-title New single
+                        h2.promo-title.title-text New single
                         h1.promo-name War For Love
                 .news
                     .container.news__container 
@@ -36,10 +42,126 @@ html(lang="en")
                                     p.news__descr Working on my upcoming full-lenth album that`s releasing later this year.                   
                             li.news__item.news__second-item 
                                 .news__bottom
-                                    p.news__descr Working on my upcoming full-lenth album that`s releasing later this year.                   
+                                    p.news__descr Halloween vibes. <br>Listen my new track!                   
                             li.news__item.news__third-item  
                                 .news__bottom
-                                    p.news__descr Working on my upcoming full-lenth album that`s releasing later this year.                   
+                                    p.news__descr WarForLove is OUT NOW!! <br> Stream it here!                   
+            section.about
+                .container.about__container
+                    .about__title.title
+                                .title-icon
+                                h2.title-text Bright Lights
+                    .about__left
+                        p.about__descr Bright Lights is a multi-Grammy nominated singer, songwriter, DJ and record producer. She has written for numerous pop stars including Britney Spears, Justin Bieber, Usher and Beyoncé. Her catalog has amassed over 1 billion streams worldwide. More than 100 million of those streams can be attributed to her artist career and include such hits as Porter Robinson's "Language," 3LAU's "How You Love Me" and her own single "Runaway." She was also a featured vocalist on Zedd's #1 Clarity album. Her latest music video, "Put It Down," reached 1 million streams in the first week, releasing independently. Bright Lights is currently in the studio working on a self-produced album slated for release in 2020
+                        ul.about__list
+                            li.about__item Based in: Los Angeles
+                            li.about__item Founded in 2011
+                            li.about__item Genre: #DancePop 
+                            li.about__item Label: 333 Recordings
+                    .about__right
+                        .about__first-pic 
+                        .about__second-pic
+            section.review
+                .container.review__container
+                    .review__block 
+                        .review__left
+                            .review__text
+                                p "In an age where mainstream music is designed to be aseasily consumed as possible, listening to Bright Lights isrefreshing, to say the least. Her sound is perfect for radiobut complex enough to separate her from other pop newcomers.” 
+                            .review__author 
+                                span PopULove.net
+                        .review__right  
+                            .review__image 
+            section.tracks
+                .container.tracks__container
+                    .tracks__left
+                        .tracks__image 
+                    .tracks__right 
+                        .tracks__title.title 
+                            .title-icon
+                            .title-text Last tracks
+
+
+            section.media
+                .container 
+                    .media__wrapper
+                        a.media__item.media__item--first
+                            .media__title
+                                h5 Media Description 
+                        a.media__item.media__item--second
+                            .media__title
+                                h5 Media Description 
+                        a.media__item.media__item--third
+                            .media__title
+                                h5 Media Description 
+                        a.media__item.media__item--fourth
+                            .media__title
+                                h5 Media Description
+                        a.media__item.media__item--fifth
+                            .media__title
+                                h5 Media Description
+            section.tours 
+                .container.tours__container
+                    .tours__slider.slider 
+                        .slider__wrapper 
+                            ul.slider__list
+                                li.slider__item
+                                    .slider__img-wrapper
+                                        +image('tours/1.png', 'slider__image')   
+                                    .slider__city Chandler, AZ
+                                    .slider__loc The Park at Wild Horse Pass
+                                    .slider__bottom 
+                                        .slider__date Apr 02 2021
+                                        button.slider__button TICKETS
+                                li.slider__item
+                                    .slider__img-wrapper
+                                        +image('tours/2.png', 'slider__image')   
+                                    .slider__city Chandler, AZ
+                                    .slider__loc The Park at Wild Horse Pass
+                                    .slider__bottom 
+                                        .slider__date Apr 02 2021
+                                        button.slider__button TICKETS         
+                                li.slider__item
+                                    .slider__img-wrapper
+                                        +image('tours/3.png', 'slider__image')   
+                                    .slider__city Chandler, AZ
+                                    .slider__loc The Park at Wild Horse Pass
+                                    .slider__bottom 
+                                        .slider__date Apr 02 2021
+                                        button.slider__button TICKETS  
+                    button.tours__arrow-left
+                        span(class="material-icons-sharp") arrow_right_alt
+                    button.tours__arrow-right 
+                        span(class="material-icons-sharp") arrow_right_alt
+            footer.footer
+                .footer__logo.logo
+                    a(class="logo__link" href="index.html")      
+                        +image('logo.png', 'logo__img')   
+                .footer__info 
+                    .footer__info-left
+                        span Artist Management:
+                        span EMAIL:
+                    .footer__info-right        
+                        span Jake Henny
+                        span jake@brightlightsofficial.com
+                .footer__socials.socials 
+                    a.socials__wrapper
+                        .social.socials__insta
+                    a.socials__wrapper
+                        .social.socials__apple
+                    a.socials__wrapper
+                        .social.socials__youtube
+                    a.socials__wrapper
+                        .social.socials__spot
+                    a.socials__wrapper
+                        .social.socials__fb
+                    a.socials__wrapper
+                        .social.socials__twitter
+                .footer__copyright ©  2020 DJ bright lights.
+
+
+                        
+
+
 
 
 

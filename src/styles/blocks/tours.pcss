@@ -1,0 +1,42 @@
+.tours {
+    height: 473px;
+    width: 100%;
+    margin-bottom: 180px;
+
+    &__container {
+        position: relative;
+    }
+
+    &__arrow-left {
+        left: -6%;
+    }
+    &__arrow-right {
+        right: -6%;
+    }
+
+    &__arrow-left:hover span, &__arrow-right:hover span {
+        color: $purple;
+    }
+
+    &__arrow-left span {
+        transform: rotate(180deg);
+    }
+
+}
+
+[class^="tours__arrow"] {
+    width: 40px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    color: white;
+    &:hover {
+        border-color: $purple;
+    }
+}

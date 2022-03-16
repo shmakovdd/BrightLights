@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    &__logo {
+        margin-bottom: 60px;
+    }
+
+    &__info {
+        display: flex;
+        margin-bottom: 60px;
+    }
+
+    [class^="footer__info"] span {
+        display: block;
+        text-transform: uppercase;
+    }
+    &__info-left, &__info-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info-left {
+        align-items: flex-end;
+        margin-right: 30px;
+    }
+    
+    &__info-right {
+        align-items: flex-start;
+    }
+
+    &__copyright {
+        font-size: 13px;
+        font-family: 'Poppins-Regular';
+        opacity: 0.5;
+    }
+}
