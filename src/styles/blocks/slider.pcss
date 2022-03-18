@@ -1,16 +1,24 @@
 .slider {
     &__wrapper {
         width: 100%;
+        overflow: hidden;
+        display: flex;
+        height: 473px;
     }
 
     &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px;
+        display: flex;
+        justify-content: space-between;
+        transition: all .4s;
+        height: 100%;
+        width: 50px;
+        position: relative;
     }
 
     &__item {
-        height: 473px;
+        width: 30%;
+        margin-right: 30px;
+        height: 100%;
         background-color: #2F2B2B;
         border-top-left-radius: 30px;
         border-bottom-right-radius: 30px;

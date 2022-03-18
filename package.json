@@ -65,6 +65,8 @@
     "pug": "^3.0.0",
     "request": "^2.88.0",
     "signale": "^1.4.0",
+    "slick-carousel": "^1.8.1",
+    "tiny-slider": "^2.9.4",
     "vue": "^2.6.12",
     "vue-router": "^3.0.2"
   }

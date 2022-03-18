@@ -5,15 +5,34 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        @media screen and (max-width: 815px){
+            justify-content: center;
+            
+        } 
+
+
+
+        @include phones {
+            align-items: center;
+          }
     }
     &__item {
-        width: 350px;
+        width: 28%;
+        min-width: 230px;
         height: 300px;
         overflow: hidden;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
         display: flex;
         align-items: flex-end;
+        @include tablets {
+            width: 60%;
+        }
+        @include phones {
+            width: 85%;
+          }
     }
     &__first-item {
         background: url(../images/content/first-news.png) center center / cover no-repeat;

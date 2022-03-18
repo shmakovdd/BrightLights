@@ -2,7 +2,7 @@
 
 html {
   @include desktop {
-    font-size: 15px;
+    font-size: 16px;
   }
   @include tablets {
     font-size: 14px;
@@ -28,20 +28,30 @@ body {
   min-height: 100%;
   position: relative;
   background-color: #1C1B21;
-
+  overflow: hidden;
 }
 
 .container {
   margin: 0 auto;
   // padding: 0 140px;
-  max-width: 1110px;
-  width: 100%;
+  max-width: 1125px;
   height: 100%;
   position: relative;
+  width: 95%;
 
-  @include phones {
-    width: 85%;
+
+  // @media screen and (max-width: 1110px) {
+  //   max-width: 970px;
+  // }
+
+  // @media screen and (max-width: 992px) {
+  //   max-width: 750px;
+  // }
+
+  @media screen and (max-width: 767px) {
+    max-width: none;
   }
+
 }
 
 * {

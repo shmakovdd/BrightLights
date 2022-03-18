@@ -4,4 +4,13 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 185px;
+
+
+    @include tablets {
+        justify-content: flex-end;
+        height: initial;
+    }
+    @include phones {
+        height: initial;
+    }
 }

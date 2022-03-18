@@ -6,6 +6,24 @@
     justify-content: center;
     margin-bottom: 60px;
 
+    &__socials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__left, &__right {
+        display: flex;
+    }
+
+    &__left {
+        margin-right: 30px; 
+
+        @include phones {
+            // margin: 0;
+        }
+    }
+
     &__logo {
         margin-bottom: 60px;
     }

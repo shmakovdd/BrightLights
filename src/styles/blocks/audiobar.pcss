@@ -1,0 +1,43 @@
+.audiobar {
+    display: flex;
+    align-items: center;
+    
+    &__play {
+        width: 25px;
+        height: 22px;
+        background: svg-load('playbttn.svg', fill='white', width=100%, height=100% ) center no-repeat;
+        margin-right: 45px;
+    }
+
+    &__progressbar-container {
+        flex: 1;
+        height: 2px;
+        background-color: #fff;
+        margin-right: 40px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__time-separation {
+        margin-left: 4px;
+    }
+
+    [class^="audiobar__"]  {
+        font-family: 'Poppins-Medium';
+    }
+    &__progressbar-inner {
+        height: 100%;
+        width: 50%;
+        background-color: $purple;
+    }
+
+    &__progress-bar-thumbnail  {
+        position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 2px;
+        background-color: $purple;
+        cursor: pointer;
+    }
+}

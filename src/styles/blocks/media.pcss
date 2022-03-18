@@ -10,6 +10,10 @@
         grid-template-areas: 
         "ITEM1 ITEM2 ITEM3 ITEM4"
         "ITEM1 ITEM5 ITEM5 ITEM4";
+        
+        @include tablets {
+            grid-gap: 10px;
+        }
     }
 
     &__item {
