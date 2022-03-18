@@ -10,12 +10,19 @@ export default function slider() {
     function calcWidth() {    
         let margin = parseFloat(getComputedStyle(list.firstChild).getPropertyValue('margin-right'));
         let sliderWidth = slider.offsetWidth;
-        list.style.width = `${sliderWidth * slides.length}px`
         let width = `${(sliderWidth - (parseFloat(margin) * 2)) / 3}px`;
+        if (window.innerWidth < 961)  { 
+            width = `${(sliderWidth - (parseFloat(margin))) / 2}px`
+        }
+
+        if (window.innerWidth < 560) {
+            width = `${(sliderWidth)}px`
+        }
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.width = width;
         }
         step = margin + parseFloat(width)
+        list.style.width = `${step * slides.length}px`
     }   
 
     function moveRight() {

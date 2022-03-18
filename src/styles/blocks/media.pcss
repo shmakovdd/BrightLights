@@ -14,6 +14,15 @@
         @include tablets {
             grid-gap: 10px;
         }
+
+        @include phones {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "ITEM1 ITEM2"
+            "ITEM5 ITEM5"
+            "ITEM3 ITEM4";
+        }
     }
 
     &__item {

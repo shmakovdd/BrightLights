@@ -8,11 +8,20 @@
         border: 1px solid #fff;
         padding: 50px 80px;
         position: relative;
+        @include tablets {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &__left {
         width: 55%;
         margin-right: 30px;
+        @include tablets {
+            width: 100%;
+            margin: 0;
+        }
     }
 
     &__text {
@@ -33,6 +42,17 @@
         right: 80px;
         top: -28%;
         width: 33%;
+
+        @include tablets {
+            position: relative;
+            width: 60%;
+            right: 0;
+            margin-bottom: 15px;
+        }
+
+        @include phones {
+            display: none;
+        }
     }
 
     &__image {
