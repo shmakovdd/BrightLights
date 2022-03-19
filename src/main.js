@@ -16,7 +16,9 @@ burger()
 function audioPlayer() {
     let playBtn = document.querySelector('.audiobar__play')
     let isPlaying;
-
+    let progressbar = document.querySelector(".audiobar__container");
+    let progressInner = document.querySelector('.audiobar__progressbar-inner')
+    let thumbnail = document.querySelector('.audiobar__progress-bar-thumbnail')
     audioElement.addEventListener('loadedmetadata', (e)=> {
         console.log(audioElement.duration);
         let {duration} = audioElement
@@ -29,7 +31,7 @@ function audioPlayer() {
             seconds = `0${seconds}`
         }
         let seconds = Math.round(duration) - (minutes * 60)
-        songDuration.innerHTML = ` ${minutes}:${seconds}`
+        songDuration.innerHTML = `${minutes}:${seconds}`
     })
     function audioPlay() {
         audioElement.play();
@@ -41,7 +43,6 @@ function audioPlayer() {
         isPlaying = false;
     }
     
-    // setDurationTime()
 
     playBtn.addEventListener('click', ()=> {
         if (isPlaying) {
@@ -51,9 +52,18 @@ function audioPlayer() {
         }
 
     })
+
+    function setProgress(e) {
+        let width = this.clientWidth;
+        let clickCords = e.offsetX;
+        let percent = Math.round((clickCords / width) * 100);
+        let {duration} = audioElement;
+        let coef = (duration / 100) * percent;
+        audioElement.currentTime = coef;
+    }
+
     function updateProgress(e) {
-        let progressInner = document.querySelector('.audiobar__progressbar-inner')
-        let thumbnail = document.querySelector('.audiobar__progress-bar-thumbnail')
+
         let {duration, currentTime} = e.srcElement;
         let percents = (currentTime / duration) * 100
         progressInner.style.width = percents + "%"
@@ -71,16 +81,17 @@ function audioPlayer() {
             minutes = Math.floor(currentTime / 60);
             seconds = Math.round(currentTime - (60 * minutes))
         }
-
+        seconds = seconds == 60 ? 0 : seconds;
         if (String(seconds).length <= 1) {
             seconds = `0${seconds}`
         }
         if (String(minutes).length <= 1) {
             minutes = `0${minutes}`
         }
-        songcurrentTime.innerHTML = ` ${minutes}:${seconds}`
-    }
 
+        songcurrentTime.innerHTML = `${minutes}:${seconds}`
+    }
+    progressbar.addEventListener('click', setProgress)
     audioElement.addEventListener('timeupdate', updateProgress)
     }
 

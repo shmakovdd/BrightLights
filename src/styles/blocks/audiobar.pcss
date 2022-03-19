@@ -9,21 +9,34 @@
         margin-right: 45px;
     }
 
-    &__progressbar-container {
+
+    &__container {
         flex: 1;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+    }
+    &__progressbar-outer {
         height: 2px;
         background-color: #fff;
-        margin-right: 40px;
         position: relative;
-        cursor: pointer;
+        width: 100%;
     }
 
     &__time-separation {
-        margin-left: 4px;
+        margin: 0  4px;
     }
 
     [class^="audiobar__"]  {
         font-family: 'Poppins-Medium';
+        font-size: 17px;
+    }
+
+    &__current-time, &__song-duration {
+        display: inline-block;
+        width: 45px;
     }
     &__progressbar-inner {
         height: 100%;

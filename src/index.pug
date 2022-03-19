@@ -42,9 +42,10 @@ html(lang="en")
                             .audiobar
                                 button.audiobar__play 
                                 audio(src="./blind.mp3" muted="muted").audio
-                                .audiobar__progressbar-container 
-                                    .audiobar__progressbar-inner
-                                    .audiobar__progress-bar-thumbnail    
+                                .audiobar__container
+                                    .audiobar__progressbar-outer 
+                                        .audiobar__progressbar-inner
+                                        .audiobar__progress-bar-thumbnail    
                                 .audiobar__timer 
                                     span.audiobar__current-time 01:30
                                     span.audiobar__time-separation -
@@ -96,9 +97,10 @@ html(lang="en")
                                 .title-text Last tracks
                             .tracks__audiobar.audiobar
                                 button.audiobar__play 
-                                .audiobar__progressbar-container 
-                                    .audiobar__progressbar-inner
-                                    .audiobar__progress-bar-thumbnail    
+                                .audiobar__container
+                                    .audiobar__progressbar-outer
+                                        .audiobar__progressbar-inner
+                                        .audiobar__progress-bar-thumbnail    
                                 .audiobar__timer 
                                     span.audiobar__current-time 00:00
                                     span.audiobar__time-separation -
