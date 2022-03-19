@@ -22,7 +22,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $white;
+
 }
+
+.body--active {
+  overflow: hidden;
+}
+
 
 .wrapper {
   min-height: 100%;
@@ -59,6 +65,7 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -88,8 +95,15 @@ img {
 a {
   display: block;
   cursor: pointer;
+  
 }
 
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: white;
+}
 button {
   outline: none;
   cursor: pointer;

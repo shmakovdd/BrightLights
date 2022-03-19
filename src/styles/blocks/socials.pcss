@@ -1,7 +1,4 @@
 .socials {
-    display: flex;
-    margin-right: 15px;
-    margin-bottom: 150px;
     &__wrapper {
         width: 44px;
         height: 44px;
@@ -11,7 +8,6 @@
         box-sizing: initial;
         border: 8px solid #2C2C2C ;
         position: relative;
-        margin-right: 30px;
         &:last-child {
             margin: 0;
         }
@@ -21,21 +17,27 @@
     }
 
     &__insta {
+        grid-area: ITEM1;
         background: svg-load('insta.svg', fill='white', width=100%, height=100% ) center no-repeat;
     }
     &__apple {
+        grid-area: ITEM2;
         background: svg-load('apple.svg', fill='white', width=100%, height=100% ) center no-repeat;
     }
     &__youtube {
+        grid-area: ITEM3;
         background: svg-load('youtube.svg', fill='white', width=100%, height=100% ) center no-repeat;
     }
     &__spot {
+        grid-area: ITEM4;
         background: svg-load('spot.svg', fill='white', width=100%, height=100% ) center no-repeat;
     }
     &__fb {
+        grid-area: ITEM5;
         background: svg-load('fb.svg', fill='white', width=100%, height=100% ) center no-repeat;
     }
     &__twitter {
+        grid-area: ITEM6;
         background: svg-load('twitter.svg', fill='white', width=100%, height=100% ) center no-repeat;
     }
 }

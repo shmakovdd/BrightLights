@@ -1,5 +1,3 @@
-
-
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -9,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+var SRC = path.resolve(__dirname, 'src/main.js');
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
@@ -39,12 +38,13 @@ module.exports = (env, argv) => {
   };
 
   const files = {
-    test: /\.(png|jpe?g|gif|woff2?)$/i,
+    test: /\.(png|jpe?g|gif|mp3|woff2?)$/i,
     loader: "file-loader",
-    options: {
-      name: "[hash].[ext]",
-    },
+    // options: {
+    //   name: "[hash].[ext]",
+    // },
   };
+
 
   const svg = {
     test: /\.svg$/,
@@ -86,6 +86,13 @@ module.exports = (env, argv) => {
     ],
   };
 
+  const mp3 = {
+    test: /\.mp3$/,
+    include: SRC,
+    loader: 'file-loader',
+
+  }
+
   const config = {
     entry: {
       main: "./src/main.js",
@@ -97,7 +104,7 @@ module.exports = (env, argv) => {
       chunkFilename: "[chunkhash].js",
     },
     module: {
-      rules: [pcss, vue, js, files, svg, pug],
+      rules: [pcss, vue, js, files, svg, pug, mp3],
     },
     resolve: {
       alias: {

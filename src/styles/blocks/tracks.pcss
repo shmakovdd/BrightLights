@@ -43,6 +43,8 @@
         }
     }
 
+
+
     &__link-name {
         font-family: 'Poppins-SemiBold';
         font-size: 14px;
@@ -91,12 +93,21 @@
         margin-right: 20px;
     } 
 
+    &__right {
+        margin-left: auto;
+        z-index: 5;
+    }
+
     &__left {
         margin-right: 77px;
         width: 42%;
         min-width: 480px;
         padding-top: 46px;
         height: 520px;
+        position: absolute;
+        @media screen and (max-width: 1150px) {
+            opacity: 0.3;
+        }
     }
     &__image {
         width: 100%;

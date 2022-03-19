@@ -7,20 +7,26 @@
     margin-bottom: 60px;
 
     &__socials {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    &__left, &__right {
-        display: flex;
-    }
-
-    &__left {
-        margin-right: 30px; 
-
+        display: grid;
+        margin-top: 60px;
+        margin-bottom: 150px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 30px;
         @include phones {
-            // margin: 0;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            "ITEM1 ITEM2 ITEM3"
+            "ITEM4 ITEM5 ITEM6";
+        }
+    }
+
+    &__info {
+        width: 100%;    
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -28,28 +34,37 @@
         margin-bottom: 60px;
     }
 
-    &__info {
-        display: flex;
-        margin-bottom: 60px;
-    }
-
-    [class^="footer__info"] span {
-        display: block;
+ 
+    &__info-top span, &__info-bottom span {
         text-transform: uppercase;
-    }
-    &__info-left, &__info-right {
-        display: flex;
-        flex-direction: column;
+        &:first-child {
+            margin-right: 30px;
+            
+            @include tablets {
+                margin-right: 5px;
+            }
+        }
     }
 
-    &__info-left {
-        align-items: flex-end;
-        margin-right: 30px;
+    &__info-top {
+        transform: translateX(-23%);
+    }
+
+    &__info-bottom {
+        transform: translateX(24%);
+    }
+    &__info-top, &__info-bottom {
+        display: flex;
+
+        @include tablets {
+            transform: none;
+        }
+
+        @include phones {
+            font-size: 12px;
+        }
     }
     
-    &__info-right {
-        align-items: flex-start;
-    }
 
     &__copyright {
         font-size: 13px;
