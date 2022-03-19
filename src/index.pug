@@ -96,15 +96,15 @@ html(lang="en")
                                 .title-icon
                                 .title-text Last tracks
                             .tracks__audiobar.audiobar
-                                button.audiobar__play 
-                                .audiobar__container
-                                    .audiobar__progressbar-outer
-                                        .audiobar__progressbar-inner
-                                        .audiobar__progress-bar-thumbnail    
+                                button(data-player="btn").audiobar__play 
+                                div(data-player="container").audiobar__container
+                                    div(data-player="outer").audiobar__progressbar-outer
+                                         div(data-player="inner").audiobar__progressbar-inner
+                                         div(data-player="nail").audiobar__progress-bar-thumbnail    
                                 .audiobar__timer 
-                                    span.audiobar__current-time 00:00
+                                    span(data-player="current").audiobar__current-time 00:00
                                     span.audiobar__time-separation -
-                                    span.audiobar__song-duration   03:00  
+                                    span(data-player="duration").audiobar__song-duration   03:00  
                             ul.tracks__playlist 
                                 li.tracks__track.tracks__track--active
                                     .tracks__tracknumber 01
