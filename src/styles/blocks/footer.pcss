@@ -1,0 +1,72 @@
+.footer {
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    &__socials {
+        display: grid;
+        margin-top: 60px;
+        margin-bottom: 150px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 30px;
+        @include phones {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 
+            "ITEM1 ITEM2 ITEM3"
+            "ITEM4 ITEM5 ITEM6";
+        }
+    }
+
+    &__info {
+        width: 100%;    
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include phones {
+                // align-items: flex-start;
+            }
+        }
+    }
+
+    &__logo {
+        margin-bottom: 60px;
+    }
+
+ 
+    &__info-top span, &__info-bottom span {
+        text-transform: uppercase;
+        &:first-child {
+            margin-right: 30px;
+            @include phones {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__info-top {
+        transform: translateX(-23%);
+    }
+
+    &__info-bottom {
+        transform: translateX(24%);
+    }
+    &__info-top, &__info-bottom {
+        display: flex;
+        @include phones {
+            font-size: 12px;
+            transform: none;
+        }
+    }
+    
+
+    &__copyright {
+        font-size: 13px;
+        font-family: 'Poppins-Regular';
+        opacity: 0.5;
+    }
+}

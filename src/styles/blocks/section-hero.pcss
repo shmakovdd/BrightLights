@@ -1,0 +1,16 @@
+.section-hero {
+    height: 100vh;
+    background: url(../images/content/back.jpg) center center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 185px;
+
+
+    @include tablets {
+        justify-content: flex-end;
+        height: initial;
+    }
+    @include phones {
+        height: initial;
+    }
+}

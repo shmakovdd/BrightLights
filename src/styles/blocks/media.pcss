@@ -1,0 +1,89 @@
+.media {
+    margin-bottom: 180px;
+    &__wrapper {
+        display: grid;
+        width: 100%;
+        height: 500px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+        grid-template-areas: 
+        "ITEM1 ITEM2 ITEM3 ITEM4"
+        "ITEM1 ITEM5 ITEM5 ITEM4";
+        
+        @include tablets {
+            grid-gap: 10px;
+        }
+
+        @include phones {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "ITEM1 ITEM2"
+            "ITEM5 ITEM5"
+            "ITEM3 ITEM4";
+        }
+    }
+
+    &__item {
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: red;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content:  '';
+            width: 100%;
+            height: 100%;
+            background-color: #1C1B21;
+            opacity: 0;
+            display: block;
+            position: absolute;
+            transition: .4s;
+        }
+        &:hover:after {
+            opacity: 0.7;
+        }
+
+        &:hover .media__title{
+            display: block;
+        }
+    }
+
+    &__title {
+        display: none;
+        font-size: 24px;
+        z-index: 1;
+        color:  $purple;
+    }
+
+    &__item--first {
+        grid-area: ITEM1;
+        background: url(../images/content/media/2.png) center center / cover no-repeat;
+    }
+
+    &__item--second {
+        grid-area: ITEM2;
+        background: url(../images/content/media/3.png) center center / cover no-repeat;
+    }
+
+    &__item--third {
+        grid-area: ITEM3;
+        background: url(../images/content/media/4.png) center center / cover no-repeat;
+
+    }
+
+    &__item--fourth {
+        grid-area: ITEM4;
+        background: url(../images/content/media/5.png) center center / cover no-repeat;
+
+    }
+
+    &__item--fifth {
+        grid-area: ITEM5;
+        background: url(../images/content/media/1.png) center center / cover no-repeat;
+    }
+}
