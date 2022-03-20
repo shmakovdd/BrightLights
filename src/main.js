@@ -52,6 +52,7 @@ function audioPlayer() {
     function audioPlay() {
         audioElement.play();
         isPlaying = true;
+        playBtn.innerHTML = `<span class="material-icons">pause</span>`
     }
 
 
@@ -60,6 +61,7 @@ function audioPlayer() {
     function audioPause() {
         audioElement.pause();
         isPlaying = false;
+        playBtn.innerHTML = `<span class="material-icons">play_arrow</span>`
     }
     
 
@@ -180,6 +182,7 @@ function audioPlayer() {
 
         function audioPlay() {
             audioElement2.play();
+
             isPlaying = true;
         }
 

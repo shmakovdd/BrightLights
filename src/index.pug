@@ -41,15 +41,16 @@ html(lang="en")
                             h1.promo-name War For Love
                             .audiobar
                                 button.audiobar__play 
+                                    <span class="material-icons">play_arrow</span>
                                 audio(src="./blind.mp3" muted="muted").audio
                                 .audiobar__container
                                     .audiobar__progressbar-outer 
                                         .audiobar__progressbar-inner
                                         .audiobar__progress-bar-thumbnail    
                                 .audiobar__timer 
-                                    span.audiobar__current-time 01:30
+                                    span.audiobar__current-time 00:00
                                     span.audiobar__time-separation -
-                                    span.audiobar__song-duration   03:00 
+                                    span.audiobar__song-duration   00:00 
                     .news
                         .container.news__container 
                             ul.news__list
@@ -96,7 +97,8 @@ html(lang="en")
                                 .title-icon
                                 .title-text Last tracks
                             .tracks__audiobar.audiobar
-                                button(data-player="btn").audiobar__play 
+                                button(data-player="btn").audiobar__play
+                                    <span class="material-icons">play_arrow</span>
                                 div(data-player="container").audiobar__container
                                     div(data-player="outer").audiobar__progressbar-outer
                                          div(data-player="inner").audiobar__progressbar-inner
